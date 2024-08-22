@@ -1,27 +1,31 @@
 import React from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import { FaHome, FaChartLine, FaPalette, FaLightbulb} from 'react-icons/fa';
+import { FaHome, FaChartLine, FaPalette, FaLightbulb } from 'react-icons/fa';
 
 function NavBar({ setActivePage }) {
   return (
     <nav className="bg-white h-full flex flex-col">
       {/* Circular Progress Indicator */}
-        <div className="flex items-center mb-4 my-4">
-          <div className="relative w-42 h-42">
-            <CircularProgressbar
-              value={80}
-              text="80"
-              styles={buildStyles({
-                pathColor: '#4f46e5',
-                textColor: '#4f46e5',
-                trailColor: '#e5e7eb',
-                textSize: '29px',
-              })}
-            />
-          </div>
+      <div className="flex items-center mb-4 my-4">
+        <div className="relative w-42 h-42">
+          <CircularProgressbar
+            value={80}
+            text="80"
+            styles={buildStyles({
+              pathColor: '#4f46e5',
+              textColor: '#4f46e5',
+              trailColor: '#e5e7eb',
+              textSize: '29px',
+            })}
+          />
         </div>
-        
+      </div>
+      <div className="flex justify-center items-center" style={{ color: '#4f46e5',fontWeight:'600' }}>
+  OVERALL
+</div>
+
+
 
       {/* Navigation Links */}
       <ul className="list-none p-0 m-0 border-t border-gray-300 my-10">
