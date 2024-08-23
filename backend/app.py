@@ -30,7 +30,7 @@ def input_pdf_setup(uploaded_file):
         ]
         return pdf_parts
     else:
-        raise FileNotFoundError("No File Uploaded")
+        raise FileNotFoundError("No File uploaded")
 
 def process_resume(uploaded_file, input_text):
     pdf_content = input_pdf_setup(uploaded_file)
