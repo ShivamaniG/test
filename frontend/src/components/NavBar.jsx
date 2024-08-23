@@ -17,13 +17,14 @@ function NavBar({ setActivePage }) {
               textColor: '#4f46e5',
               trailColor: '#e5e7eb',
               textSize: '29px',
+              strokeLinecap: 'butt',
             })}
           />
         </div>
       </div>
-      <div className="flex justify-center items-center" style={{ color: '#4f46e5',fontWeight:'600' }}>
-  OVERALL
-</div>
+      <div className="flex justify-center items-center" style={{ color: '#4f46e5', fontWeight: '600' }}>
+        OVERALL
+      </div>
 
 
 

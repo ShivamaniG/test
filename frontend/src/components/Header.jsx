@@ -1,11 +1,18 @@
 // src/components/Header.jsx
 import React from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+  const navigate = useNavigate();
+
+  const handleRescoreClick = () => {
+    navigate('/upload'); // Navigate to the upload page
+  };
+
   return (
     <header className="bg-[#172747] text-white flex items-center justify-between p-2">
-      <h1 className="text-lg font"> RESUME BOOST | SCORE MY RESUME</h1>
+      <h1 className="text-lg font">RESUME BOOST | SCORE MY RESUME</h1>
       <div className="flex items-center space-x-2">
         <div className="relative flex items-center">
           <MdKeyboardArrowDown className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white" size={20} />
@@ -15,7 +22,10 @@ function Header() {
             <option value="option3">Option 3</option>
           </select>
         </div>
-        <button className="bg-[#5040ff] text-white py-1 px-4 rounded hover:bg-[#4032c0]">
+        <button
+          onClick={handleRescoreClick}
+          className="bg-[#5040ff] text-white py-1 px-4 rounded hover:bg-[#4032c0]"
+        >
           Rescore My Resume
         </button>
       </div>

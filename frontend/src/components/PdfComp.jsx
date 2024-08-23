@@ -8,7 +8,10 @@ function PdfComp({ pdfFile }) {
 
   useEffect(() => {
     const loadPdf = async () => {
-      const loadingTask = pdfjsLib.getDocument(pdfFile);
+      const fileData = JSON.parse(localStorage.getItem('uploadedFileData'));
+      const typedArray = new Uint8Array(fileData);
+
+      const loadingTask = pdfjsLib.getDocument({ data: typedArray });
       const pdf = await loadingTask.promise;
       const images = [];
 

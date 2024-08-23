@@ -16,6 +16,17 @@ const defaultMissingSkills = [
 const SkillBoost = ({ jobSkills = defaultJobSkills, missingSkills = defaultMissingSkills }) => {
   return (
     <div className="p-6 bg-white shadow-md rounded-lg">
+                  <div className="flex-1 text-center pb-5">
+                <div className="flex items-center">
+                    <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center cursor-pointer mr-2">
+                        <span className="material-icons">chevron_left</span>
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center cursor-pointer">
+                        <span className="material-icons">chevron_right</span>
+                    </div>
+                </div>
+            </div>
+      
 
       {/* Displaying the skills mentioned in the job description */}
       <div className="mb-6">

@@ -1,15 +1,18 @@
 // src/components/ResumeView.jsx
 import React from "react";
 import PdfComp from "./PdfComp";
-import pdf from "../static/Shivamani.pdf"; // Make sure this path is correct
+import { useUpload } from '../context/UploadContext'; // Import the useUpload hook
 
 function ResumeView() {
+  const { uploadedFile } = useUpload(); // Get the uploaded file from context
+
   return (
     <div className="flex-1 p-6 bg-white shadow-md rounded-lg">
-      {/* <h1 className="text-2xl font-bold mb-4">Resume View</h1> */}
-      <p className="text-gray-700">
-      </p>
-      <PdfComp pdfFile={pdf} />
+      {uploadedFile ? (
+        <PdfComp pdfFile={uploadedFile} />
+      ) : (
+        <p className="text-gray-700">No file uploaded yet.</p>
+      )}
     </div>
   );
 }

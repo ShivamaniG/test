@@ -19,6 +19,16 @@ function Home() {
 
     return (
         <div className="p-6  bg-white shadow-md rounded-lg">
+            <div className="flex-1 text-center pb-5">
+                <div className="flex items-center">
+                    <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center cursor-pointer mr-2">
+                        <span className="material-icons">chevron_left</span>
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center cursor-pointer">
+                        <span className="material-icons">chevron_right</span>
+                    </div>
+                </div>
+            </div>
             <h1 className="text-3xl font-bold mb-4">
                 {getGreeting()}, {getUserName()}!
             </h1>
@@ -52,24 +62,24 @@ function Home() {
                 <div className="absolute top-6 right-0 transform translate-x-1/2 text-gray-700 text-lg">100</div>
             </div>
             <div className="p-6 bg-yellow-50 rounded-xl my-12 border-l-4 border-yellow-400 flex flex-col pb-12">
-    <h2 className="text-xl font-semibold text-gray-800 mb-4">How to Improve Your Score</h2>
-    <p className="text-gray-800">
-        Use the feedback to find and fix errors in your resume, then reupload it to get a new score. Now current score is {score}. There are chances of increasing by {100 - score} points with minor changes and revisions to your resume.
-    </p>
-</div>
+                <h2 className="text-xl font-semibold text-gray-800 mb-4">How to Improve Your Score</h2>
+                <p className="text-gray-800">
+                    Use the feedback to find and fix errors in your resume, then reupload it to get a new score. Now current score is {score}. There are chances of increasing by {100 - score} points with minor changes and revisions to your resume.
+                </p>
+            </div>
             <div className="p-6 bg-violet-50 rounded-xl my-10 border-l-4 border-violet-400">
-    <h2 className="text-2xl font-bold mb-4 text-gray-800">How to Fix Your Resume</h2>
-    <p className="text-gray-800">
-        Here are some tips to improve your resume:
-        <ul className="list-disc list-inside mt-2 text-gray-700">
-            <li>Review the feedback carefully and address each point.</li>
-            <li>Ensure your resume highlights your most relevant skills and experiences.</li>
-            <li>Use clear and concise language to describe your achievements.</li>
-            <li>Format your resume to be visually appealing and easy to read.</li>
-            <li>Consider seeking professional help or using resume templates for additional guidance.</li>
-        </ul>
-    </p>
-</div>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">How to Fix Your Resume</h2>
+                <p className="text-gray-800">
+                    Here are some tips to improve your resume:
+                    <ul className="list-disc list-inside mt-2 text-gray-700">
+                        <li>Review the feedback carefully and address each point.</li>
+                        <li>Ensure your resume highlights your most relevant skills and experiences.</li>
+                        <li>Use clear and concise language to describe your achievements.</li>
+                        <li>Format your resume to be visually appealing and easy to read.</li>
+                        <li>Consider seeking professional help or using resume templates for additional guidance.</li>
+                    </ul>
+                </p>
+            </div>
         </div>
     );
 }
