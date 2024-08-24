@@ -1,0 +1,8 @@
+flask 
+Flask, request, jsonify, send_from_directory
+dotenv 
+os
+fitz
+google.generativeai 
+flask_cors 
+docx2txt
